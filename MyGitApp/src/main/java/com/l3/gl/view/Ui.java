@@ -4,16 +4,21 @@ import javax.swing.*;
 
 public class Ui {
     private JFrame frame;
-    private JButton button;
+    private JButton addUserButton;
+    private JButton addProductButton;
 
     public Ui() {
-        frame = new JFrame("Simple UI");
+        frame = new JFrame("TP Project");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
-        button = new JButton("Click Me");
-        panel.add(button);
+
+        addUserButton = new JButton("Add User");
+        addProductButton = new JButton("Add Product");
+
+        panel.add(addUserButton);
+        panel.add(addProductButton);
 
         frame.add(panel);
     }
@@ -22,12 +27,6 @@ public class Ui {
         frame.setVisible(true);
     }
 
-    public JButton getButton() {
-        return button;
-    }
-
-    public static void main(String[] args) {
-        Ui ui = new Ui();
-        ui.show();
-    }
+    public JButton getAddUserButton() { return addUserButton; }
+    public JButton getAddProductButton() { return addProductButton; }
 }

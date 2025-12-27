@@ -17,8 +17,9 @@ public class Controller {
         users = new ArrayList<>();
         products = new ArrayList<>();
 
-        // مثال: ربط زر الواجهة بإضافة مستخدم
-        ui.getButton().addActionListener(e -> addUser("Alice", 25));
+        // ربط أزرار الواجهة بالوظائف
+        ui.getAddUserButton().addActionListener(e -> addUser("Alice", 25));
+        ui.getAddProductButton().addActionListener(e -> addProduct("Laptop", 1200.0));
     }
 
     public void addUser(String name, int age) {
@@ -29,7 +30,7 @@ public class Controller {
 
     public void addProduct(String name, double price) {
         Product product = new Product(name, price);
-        products.add(new Product(name, price));
+        products.add(product);
         System.out.println("Added product: " + name);
     }
 
@@ -51,9 +52,9 @@ public class Controller {
         Controller app = new Controller();
         app.start();
 
-        // اختبار الوظائف
+        // أمثلة اختبارية
         app.addUser("Bob", 30);
-        app.addProduct("Laptop", 1200);
+        app.addProduct("Phone", 800.0);
         app.printUsers();
         app.printProducts();
     }
