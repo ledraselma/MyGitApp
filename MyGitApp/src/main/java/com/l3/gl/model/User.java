@@ -1,26 +1,19 @@
 package com.l3.gl.model;
 
 public class User {
+    private String name;
+    private int age;
 
-    private int id;
-    private String username;
-    private String email;
-
-    public User(int id, String username, String email) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
+    // Constructor جديد
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-    public int getId() {
-        return id;
-    }
+    // Getters و Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
 }
