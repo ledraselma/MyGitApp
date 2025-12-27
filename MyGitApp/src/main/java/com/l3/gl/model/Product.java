@@ -1,27 +1,19 @@
 package com.l3.gl.model;
 
 public class Product {
-
-    private int id;
     private String name;
     private double price;
 
-    public Product(int id, String name, double price) {
-        this.id = id;
+    // Constructor جديد
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
+    // Getters و Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getName() {
-        return name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
 }
-
